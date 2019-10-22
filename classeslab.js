@@ -26,8 +26,8 @@ class Book {
         this.author = author
         this.rating = rating
     }
-    isGood(rating){
-     if (rating > 7){
+    isGood(){
+     if (this.rating > 7){
         return true
     } else{
         return false
@@ -36,8 +36,41 @@ class Book {
     }
 }
 
-let book1 = new Book("Harry Poter"," J.K Rowling",5)
+let book1 = new Book("Harry Poter"," J.K Rowling", 10)
 let book2 = new Book("A Scarlet Letter", "Nathaniel Hawthhorne", 8)
 
 // console.log(book1.isGood(book1.rating))
+
+//Question 3
+
+class Dog {
+    constructor(name, breed, mood, hungry){
+        this.name = name
+        this.breed = breed
+        this.mood = mood
+        this.hungry = hungry
+    }
+    playFetch() {
+        this.hungry === true
+        this.mood = "playful"
+        return "Ruff!"
+    }
+    feed() {
+    if (this.hungry === true){
+        return "Woof!"
+    } else {
+        return "The dog doesn't look hungry"
+    }
+    }
+       
+}
+let dog1 = new Dog("Spot", "Dalmation", "happy", false)
+console.log(dog1.feed())
+
+
+
+
+
+
+
 
