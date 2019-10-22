@@ -65,8 +65,47 @@ class Dog {
        
 }
 let dog1 = new Dog("Spot", "Dalmation", "happy", false)
-console.log(dog1.feed())
+// console.log(dog1.feed())
 
+
+
+// Question 4
+
+
+
+let freezingPoint = {celsius : 0, fahrenheit : 32 , kelvin : 273}
+
+class Celsius {
+    constructor(celsius){
+        this.celsius = celsius
+       
+    }
+    getFahrenheitTemp(){
+         return (1.8 * this.celsius) + 32
+    }
+    getKelvinTemp(){
+        return this.celsius + freezingPoint["kelvin"]
+    }
+    isBelowFreeze(){
+      
+      if  (this.getFahrenheitTemp < freezingPoint["fahrenheit"]){
+          return true
+      } else if (this.getKelvinTemp < freezingPoint["kelvin"]){
+          return true
+      } else if (this.celsius < freezingPoint["celsius"]) {
+          return true
+      } else {
+          return false
+      }
+          
+      }
+      
+    }
+
+let outsideTemp = new Celsius(10)
+// console.log(outsideTemp.celsius)
+// console.log(outsideTemp.getKelvinTemp())
+console.log(outsideTemp.isBelowFreeze())
 
 
 
