@@ -105,6 +105,9 @@ let outsideTemp = new Celsius(10)
 // console.log(outsideTemp.getKelvinTemp())
 // console.log(outsideTemp.isBelowFreeze())
 
+
+// Question 5
+
 class Movie {
     constructor(name,year,genre,cast,description){
         this.name  =  name
@@ -120,9 +123,32 @@ class Movie {
 }
 
 let movie1 = new Movie('Holes','2006','Thriller','Shia Lebuff','Very Good Movie')
-console.log(movie1.blurb());
+// console.log(movie1.blurb());
 
 
 
+// Question 6
 
+class Vector {
+    constructor(x,y){
+        this.x = x
+        this.y = y
+    }
+    plus(vector){
+        let x = this.x + vector['x']
+        let y = this.y + vector['y']
+        return {x,y}
+    }
+    minus(vector){
+        let x = this.x - vector['x']
+        let y = this.y - vector['y']
+        return {x,y}
+    
+    }
+
+
+}
+let v1 = new Vector(1,2)
+let v2 = new Vector(3,4)
+console.log(v1.plus(v2))
 
