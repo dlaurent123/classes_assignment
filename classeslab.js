@@ -90,24 +90,37 @@ class Celsius {
       
       if  (this.getFahrenheitTemp < freezingPoint["fahrenheit"]){
           return true
-      } else if (this.getKelvinTemp < freezingPoint["kelvin"]){
-          return true
-      } else if (this.celsius < freezingPoint["celsius"]) {
-          return true
       } else {
           return false
+
+      }
       }
           
       }
       
-    }
+ 
 
 let outsideTemp = new Celsius(10)
 // console.log(outsideTemp.celsius)
 // console.log(outsideTemp.getKelvinTemp())
-console.log(outsideTemp.isBelowFreeze())
+// console.log(outsideTemp.isBelowFreeze())
 
+class Movie {
+    constructor(name,year,genre,cast,description){
+        this.name  =  name
+        this.year  =  year
+        this.genre =  genre
+        this.cast  =  cast
+        this.description = description
 
+    }
+    blurb(){
+        return this.name + ' came out in ' + this.year + '.' + ' It was an old film starring ' + this.cast + ' and is ' + this.description + '.'
+    }
+}
+
+let movie1 = new Movie('Holes','2006','Thriller','Shia Lebuff','Very Good Movie')
+console.log(movie1.blurb());
 
 
 
