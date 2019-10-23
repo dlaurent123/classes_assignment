@@ -152,3 +152,24 @@ let v1 = new Vector(1,2)
 let v2 = new Vector(3,4)
 console.log(v1.plus(v2))
 
+
+
+
+// Question 7 
+
+class Cylinder {
+    constructor(radius,height){
+        this.radius = radius;
+        this.height = height;
+
+    }
+    getVolume(){
+     return (3.142 * Math.pow(this.radius,2)) * this.height
+    }
+    getSurface(){
+     return ((2 * 3.142) * Math.pow(this.radius,2)) + ((2 * 3.142) * (this.radius * this.height))
+    }
+}
+let cylinder1 = new Cylinder(5,5)
+console.log(cylinder1.getVolume())
+console.log(cylinder1.getSurface())
